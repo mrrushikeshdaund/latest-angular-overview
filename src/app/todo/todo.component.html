@@ -1,0 +1,8 @@
+<h3>Todos</h3>
+<h3>Search Todo</h3>
+<input placeholder="Search Todo" [(ngModel)]="serachTodo" />
+<ul class="todos">
+  @for (todo of todoItems() | filterTodos:serachTodo() ; track todo.id) {
+  <app-todo-item [todo]="todo" (todoToggle)="updateTodoItem($event)" />
+  }
+</ul>
