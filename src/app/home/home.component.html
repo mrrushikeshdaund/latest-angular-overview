@@ -2,3 +2,5 @@
 <app-greeting [message]="homeMessage()" />
 <app-counter />
 <input type="text" (keyup)="handleKeyTyping($event)" />
+
+<h3>{{ cartCount | async }}</h3>
